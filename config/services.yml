@@ -1,0 +1,7 @@
+services:
+    bruninoit.wvtt.listener:
+        class: bruninoit\ajaxreload\event\main_listener
+        arguments:
+            - @config
+        tags:
+            - { name: event.listener }
