@@ -20,11 +20,12 @@ class main_listener implements EventSubscriberInterface
 	//change true -> false to disable the options
 	$whoisonline = true; //refresh who is online
 	$forumlist = true;   //refresh forum list
+	$posts_intopics = true;   //refresh posts in view topics
 	
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.common'						=> 'variables_refresh',
+			'core.common'		=> 'variables_refresh',
 			);
 	}
 	/* @var \phpbb\template\template */
@@ -39,5 +40,7 @@ class main_listener implements EventSubscriberInterface
 	//change true to false to disable the options
 	$this->template->assign_var('FORUMLIST_RELOAD', $forumlist); 
 	$this->template->assign_var('WHOISONLINE_RELOAD', $whoisonline);
+	$this->template->assign_var('POSTS_RELOAD', $posts_intopics);
+	$this->template->assign_var('URL_CORRENTE', $what);
 	}
 }
