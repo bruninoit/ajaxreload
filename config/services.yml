@@ -3,5 +3,6 @@ services:
         class: bruninoit\ajaxreload\event\main_listener
         arguments:
             - @config
+            - @request
         tags:
             - { name: event.listener }
