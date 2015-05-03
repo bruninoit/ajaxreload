@@ -42,8 +42,8 @@ class main_listener implements EventSubscriberInterface
     
    //OPTIONS START 
 	//change true to false to disable the option which you want
-	$whoisonline = true		//refresh who is online
-	$forumlist = true		//refresh forum list
+	$whoisonline = true;		//refresh who is online
+	$forumlist = true;		//refresh forum list
 	$posts_intopics = true; 	//refresh posts in view topics
 	$viewforum = true; 		//refresh topics/forums list in viewforum
 	
