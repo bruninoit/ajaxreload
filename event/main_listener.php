@@ -40,18 +40,22 @@ class main_listener implements EventSubscriberInterface
 	$url=utf8_normalize_nfc($this->request->variable('request_uri', '', true));
 	
     
-    
-	//change true -> false to disable the options
-	$whoisonline = true; //refresh who is online
-	$forumlist = true;   //refresh forum list
-	$posts_intopics = true;   //refresh posts in view topics
-	$reload_seconds = 15;   //refresh time in seconds
-    
+   //OPTIONS START 
+	//change true to false to disable the option which you want
+	$whoisonline = true		//refresh who is online
+	$forumlist = true		//refresh forum list
+	$posts_intopics = true; 	//refresh posts in view topics
+	$viewforum = true; 		//refresh topics/forums list in viewforum
+	
+	//refresh time in seconds
+	$reload_seconds = 15;
+    //OPTIONS END 
     
     
 	$this->template->assign_var('FORUMLIST_RELOAD', $forumlist); 
 	$this->template->assign_var('WHOISONLINE_RELOAD', $whoisonline);
 	$this->template->assign_var('POSTS_RELOAD', $posts_intopics);
+	$this->template->assign_var('VIEWFORUM_RELOAD', $viewforum);
 	$this->template->assign_var('URL_CORRENTE', $url);
 	$this->template->assign_var('TIME_RELOAD', $reload_seconds);
 	}
