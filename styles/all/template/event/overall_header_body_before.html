@@ -15,3 +15,9 @@ $('#whoisonline_ricarica').load('{URL_CORRENTE} #whoisonline_ricarica');
 $('#posts').load('{URL_CORRENTE} #posts');
 }, {TIME_RELOAD}000);</script> 
 <!-- ENDIF -->
+
+<!-- IF VIEWFORUM_RELOAD and SCRIPT_NAME eq 'viewforum' -->
+<script>var auto_refresh = setInterval(function(){
+$('#page-body').load('{URL_CORRENTE} #page-body');
+}, {TIME_RELOAD}000);</script> 
+<!-- ENDIF -->
