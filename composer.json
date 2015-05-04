@@ -3,7 +3,7 @@
 "type": "phpbb-extension",
 "description": "Ajax auto-reload of some parts of pages",
 "homepage": "https://github.com/bruninoit/ajaxreload",
-"version": "0.1.0-a1",
+"version": "0.1.0-b1",
 "time": "2015-04-29",
 "license": "GPL-2.0",
 "authors": [
@@ -18,7 +18,7 @@
 "php": ">=5.3"
 },
 "extra": {
-"display-name": "Ayax auto-reload",
+"display-name": "Real Time Notifications",
 "soft-require": {
 "phpbb/phpbb": "3.1.*@dev"
 },
