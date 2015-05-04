@@ -4,59 +4,52 @@
 
 <form id="acp_board" method="post" action="{U_ACTION}">
 	<fieldset>
-		<dl>
-			<dt><label for="toptentopics">{L_ACP_POSITION}</label><br /><span>{L_ACP_POSITION_DESC}</span></dt>
-			<dd>
-			<select name="toptentopics_position">
-			    <option value="1"<!-- IF ACP_POSITION eq '1' --> selected<!-- ENDIF --> /> {L_BEFORE_FORUMLIST}</option>
-			    <option value="2"<!-- IF ACP_POSITION eq '2' --> selected<!-- ENDIF --> /> {L_AFTER_MARKFORUM}</option>
-			    <option value="0"<!-- IF ACP_POSITION eq '0' --> selected<!-- ENDIF --> /> {L_AFTER_FORUMLIST}</option>
-			    <option value="3"<!-- IF ACP_POSITION eq '3' --> selected<!-- ENDIF --> /> {L_BEFORE_LOGIN}</option>
-			    <option value="4"<!-- IF ACP_POSITION eq '4' --> selected<!-- ENDIF --> /> {L_ALL_FOOTER}</option>
-			    
-			    </select>
-			    </dd>
-		</dl>
-			    <dl>
-			<dt><label for="toptentopics">{L_ACP_NUMBER}</label><br /><span>{L_ACP_NUMBER_DESC}</span></dt>
-			<dd><input type="text" class="text" name="toptentopics_number" value="{ACP_NUMBER}" /></dd>
-			</dl>
-			    <dl>
-			<dt><label for="toptentopics">{L_ACP_GUEST}</label></dt>
-			<dd><input type="radio" class="radio" name="toptentopics_guest" value="1" <!-- IF ACP_GUEST -->checked="checked"<!-- ENDIF -->/>{L_YES} &nbsp;
-			    <input type="radio" class="radio" name="toptentopics_guest" value="0" <!-- IF not ACP_GUEST -->checked="checked"<!-- ENDIF -->/>{L_NO}</dd>
+		
+	<dl>
+		<dt>
+			<label for="toptentopics">{L_AR_FORUMLIST}</label><br /><span>{L_AR_FORUMLIST_DESC}</span>
+		</dt>
+		<dd>
+			<input type="radio" class="radio" name="ar_forumlist" value="1" <!-- IF AR_FORUMLIST -->checked="checked"<!-- ENDIF -->/>{L_YES} &nbsp;
+			<input type="radio" class="radio" name="ar_forumlist" value="0" <!-- IF not AR_FORUMLIST -->checked="checked"<!-- ENDIF -->/>{L_NO}
+		</dd>
 	</dl>
 	<dl>
-	<dt><label for="toptentopics">{L_ACP_DATA}</label>
+		<dt>
+			<label for="toptentopics">{L_AR_POSTS}</label><br /><span>{L_AR_POSTS_DESC}</span>
+		</dt>
+		<dd>
+			<input type="radio" class="radio" name="ar_posts" value="1" <!-- IF AR_POSTS -->checked="checked"<!-- ENDIF -->/>{L_YES} &nbsp;
+			<input type="radio" class="radio" name="ar_posts" value="0" <!-- IF not AR_POSTS -->checked="checked"<!-- ENDIF -->/>{L_NO}
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="toptentopics">{L_AR_VIEWFORUM}</label><br /><span>{L_AR_VIEWFORUM_DESC}</span>
+		</dt>
+		<dd>
+			<input type="radio" class="radio" name="ar_viewforum" value="1" <!-- IF AR_VIEWFORUM -->checked="checked"<!-- ENDIF -->/>{L_YES} &nbsp;
+			<input type="radio" class="radio" name="ar_viewforum" value="0" <!-- IF not AR_VIEWFORUM -->checked="checked"<!-- ENDIF -->/>{L_NO}
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="toptentopics">{L_AR_WHOISONLINE}</label><br /><span>{L_AR_WHOISONLINE_DESC}</span>
+		</dt>
+		<dd>
+			<input type="radio" class="radio" name="ar_whoisonline" value="1" <!-- IF AR_WHOISONLINE -->checked="checked"<!-- ENDIF -->/>{L_YES} &nbsp;
+			<input type="radio" class="radio" name="ar_whoisonline" value="0" <!-- IF not AR_WHOISONLINE -->checked="checked"<!-- ENDIF -->/>{L_NO}
+		</dd>
+	</dl>
+	<dl>
+		<dt>
+			<label for="toptentopics">{L_ACP_NUMBER}</label><br /><span>{L_ACP_NUMBER_DESC}</span>
+		</dt>
+		<dd>
+			<input type="number" class="number" name="ar_time" value="{AR_TIME}" />
+		</dd>
+	</dl>	
 		
-	</dt>
-	<dd>
-			<select name="toptentopics_data">
-			    <option value="5"<!-- IF ACP_DATA eq '5' --> selected<!-- ENDIF --> /> {L_ONEMONTH}</option>
-			    <option value="4"<!-- IF ACP_DATA eq '4' --> selected<!-- ENDIF --> /> {L_THREEMONTH}</option>
-			    <option value="1"<!-- IF ACP_DATA eq '1' --> selected<!-- ENDIF --> /> {L_SIXMONTH}</option>
-			    <option value="2"<!-- IF ACP_DATA eq '2' --> selected<!-- ENDIF --> /> {L_TWELVEMONTH}</option>
-			    <option value="3"<!-- IF ACP_DATA eq '3' --> selected<!-- ENDIF --> /> {L_ALL_TOPICS}</option>
-			    </select>
-			    </dd>
-			 </dl>
-		
-		<dl>
-			<dt><label for="toptentopics">{L_ACP_IMPORTANT}</label></dt>
-			<dd>
-			<select name="toptentopics_important">
-			    <option value="0"<!-- IF ACP_IMPORTANT eq '0' --> selected<!-- ENDIF --> /> {L_TNORMAL}</option>
-			    <option value="1"<!-- IF ACP_IMPORTANT eq '1' --> selected<!-- ENDIF --> /> {L_TIMPORTANT}</option>
-			    <option value="2"<!-- IF ACP_IMPORTANT eq '2' --> selected<!-- ENDIF --> /> {L_TANNUNCE}</option>
-			    <option value="3"<!-- IF ACP_IMPORTANT eq '3' --> selected<!-- ENDIF --> /> {L_TGLOBAL}</option>
-
-			    </select>
-			    </dd>
-			    </dl>
-			<dl>
-			<dt><label for="toptentopics">{L_ACP_FORUM}</label><br /><span>{L_ACP_FORUM_DESC}</span></dt>
-			<dd><input name="toptentopics_forum" value="{ACP_FORUM}" class="text" /></dd>
-			</dl>
 		<p class="submit-buttons">
 			<input class="button1" type="submit" id="submit" name="submit" value="{L_SUBMIT}" />&nbsp;
 			<input class="button2" type="reset" id="reset" name="reset" value="{L_RESET}" />
