@@ -23,11 +23,12 @@ class main_listener implements EventSubscriberInterface
 	{
 		return array(
 			'core.common'		=> 'variables_refresh',
+			'core.user_setup'	=> 'ar_languages',
 			);
 	}
 	protected $config;
 	protected $request;
-    protected $template;
+        protected $template;
 
 	public function __construct(\phpbb\config\config $config, \phpbb\request\request $request, \phpbb\template\template $template)
 	{
@@ -35,9 +36,24 @@ class main_listener implements EventSubscriberInterface
         $this->request = $request;
         $this->template = $template;
 	}
+	
+	
+	public function ar_languages($event)
+	{	
+//language start
+$lang_set_ext = $event['lang_set_ext'];
+		$lang_set_ext[] = array(
+			'ext_name' => 'bruninoit/ajaxreload',
+			'lang_set' => 'common',
+		);
+		$event['lang_set_ext'] = $lang_set_ext;
+//language end
+	}
+	
+	
 	public function variables_refresh($event)
 	{
-	$url=utf8_normalize_nfc($this->request->variable('request_uri', '', true));
+	$url=$this->request->variable('rwefd', '');
 	
     
    //OPTIONS START 
