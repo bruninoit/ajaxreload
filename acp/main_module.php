@@ -24,22 +24,20 @@ class main_module
 			{
 				trigger_error('FORM_INVALID');
 			}
-			$config->set('toptentopics_forum', $request->variable('toptentopics_forum', '', true));
-			$config->set('toptentopics_number', $request->variable('toptentopics_number', 0));
-			$config->set('toptentopics_position', $request->variable('toptentopics_position', 0));
-			$config->set('toptentopics_guest', $request->variable('toptentopics_guest', 0));
-			$config->set('toptentopics_data', $request->variable('toptentopics_data', 0));
-			$config->set('toptentopics_important', $request->variable('toptentopics_important', 0));
-			trigger_error($user->lang('ACP_TTT_SAVED') . adm_back_link($this->u_action));
+			$config->set('ar_time', $request->variable('ar_time', '', true));
+			$config->set('ar_forumlist', $request->variable('ar_forumlist', 0));
+			$config->set('ar_posts', $request->variable('ar_posts', 0));
+			$config->set('ar_viewforum', $request->variable('ar_viewforum', 0));
+			$config->set('ar_whoisonline', $request->variable('ar_whoisonline', 0));
+			trigger_error($user->lang('ACP_AR_SAVED') . adm_back_link($this->u_action));
 		}
 		$template->assign_vars(array(
 			'U_ACTION' => $this->u_action,
-			'ACP_POSITION'=> $config['toptentopics_position'],
-			'ACP_NUMBER'=> $config['toptentopics_number'],
-			'ACP_GUEST'=> $config['toptentopics_guest'],
-			'ACP_IMPORTANT'=> $config['toptentopics_important'],
-			'ACP_DATA'=> $config['toptentopics_data'],
-			'ACP_FORUM'=> $config['toptentopics_forum']
+			'AR_TIME'=> $config['ar_time'],
+			'AR_FORUMLIST'=> $config['ar_forumlist'],
+			'AR_POSTS'=> $config['ar_posts'],
+			'AR_VIEWFORUM'=> $config['ar_viewforum'],
+			'AR_WHOISONLINE'=> $config['ar_whoisonline']
 		));
 	}
 }
