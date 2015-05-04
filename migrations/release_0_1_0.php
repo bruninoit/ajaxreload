@@ -11,7 +11,7 @@ class release_0_1_0 extends \phpbb\db\migration\migration
 {
 	public function effectively_installed()
 	{
-		return isset($this->config['toptentopics_forum']);
+		return isset($this->config['ar_whoisonline']);
 	}
 	static public function depends_on()
 	{
@@ -20,12 +20,11 @@ class release_0_1_0 extends \phpbb\db\migration\migration
 	public function update_data()
 	{
 		return array(
-			array('config.add', array('toptentopics_position', 0)),
-			array('config.add', array('toptentopics_important', 1)),
-			array('config.add', array('toptentopics_number', 10)),
-			array('config.add', array('toptentopics_guest', 1)),
-			array('config.add', array('toptentopics_data', 3)),
-			array('config.add', array('toptentopics_forum', 1,2)),
+			array('config.add', array('ar_viewforum', 1)),
+			array('config.add', array('ar_posts', 1)),
+			array('config.add', array('ar_forumlist', 1)),
+			array('config.add', array('ar_whoisonline', 1)),
+			array('config.add', array('ar_time', 10)),
 			array('module.add', array(
 				'acp',
 				'ACP_CAT_DOT_MODS',
