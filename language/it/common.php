@@ -18,4 +18,8 @@ $lang = array_merge($lang, array(
 	'ACP_AR_TITLE'			=> 'Impostazioni',
 	'ACP_AR_CATEGORY'		=> 'Real Time Notifications ',
 	'ACP_AR_SAVED'			=> 'Impostazioni aggiornate correttamente',
+	'ACP_AR_SAVED'			=> 'Impostazioni aggiornate correttamente',
+	'ACP_AR_SAVED'			=> 'Impostazioni aggiornate correttamente',
+	'ACP_AR_SAVED'			=> 'Impostazioni aggiornate correttamente',
+	'ACP_AR_SAVED'			=> 'Impostazioni aggiornate correttamente','ACP_AR_SAVED'			=> 'Impostazioni aggiornate correttamente',
 ));
