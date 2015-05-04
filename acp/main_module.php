@@ -15,7 +15,7 @@ class main_module
 		global $db, $user, $auth, $template, $cache, $request;
 		global $config, $phpbb_root_path, $phpbb_admin_path, $phpEx;
 		$user->add_lang('acp/common');
-		$this->tpl_name = 'toptentopics_body';
+		$this->tpl_name = 'ar_settings';
 		$this->page_title = $user->lang('ACP_AR_TITLE');
 		add_form_key('bruninoit/ajaxreload');
 		if ($request->is_set_post('submit'))
