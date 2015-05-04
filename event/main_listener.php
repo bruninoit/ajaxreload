@@ -67,6 +67,14 @@ $lang_set_ext = $event['lang_set_ext'];
 	$reload_seconds = 15;
     //OPTIONS END 
     
+     //OPTIONS START 
+	$whoisonline = $this->config['ar_whoisonline'];		//refresh who is online
+	$forumlist = $this->config['ar_forumlist'];		//refresh forum list
+	$posts_intopics = $this->config['ar_posts'];	//refresh posts in view topics
+	$viewforum = $this->config['ar_viewforum'];		//refresh topics/forums list in viewforum
+	$reload_seconds = $this->config['ar_time']; //refresh time in seconds
+    //OPTIONS END 
+    
     
 	$this->template->assign_var('FORUMLIST_RELOAD', $forumlist); 
 	$this->template->assign_var('WHOISONLINE_RELOAD', $whoisonline);
