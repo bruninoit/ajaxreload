@@ -16,7 +16,7 @@ class main_info
 			'title'		=> 'ACP_AR_TITLE',
 			'version'	=> '1.0.0',
 			'modes'		=> array(
-				'settings'	=> array('title' => 'ACP_AR_TITLE', 'auth' => 'ext_brununoit/ajaxreload && acl_a_board', 'cat' => array('ACP_AR_TITLE')),
+				'settings'	=> array('title' => 'ACP_AR_TITLE', 'auth' => 'ext_bruninoit/ajaxreload && acl_a_board', 'cat' => array('ACP_AR_TITLE')),
 			),
 		);
 	}
