@@ -1,23 +1,41 @@
 <!-- IF FORUMLIST_RELOAD -->
 <script>var auto_refresh = setInterval(function(){
-$('#forum_list_ricarica').load('{URL_CORRENTE} #forum_list_ricarica');
+jQuery('#forum_list_ricarica').load('{URL_CORRENTE} #forum_list_ricarica');
 }, {TIME_RELOAD}000);</script> 
 <!-- ENDIF -->
 
-<!-- IF WHOISONLINE_RELOAD -->
+<!-- IF WHOISONLINE_RELOAD and SCRIPT_NAME eq 'index' -->
 <script>var auto_refresh = setInterval(function(){
-$('#whoisonline_ricarica').load('{URL_CORRENTE} #whoisonline_ricarica');
+jQuery('#whoisonline_ricarica').load('{URL_CORRENTE} #whoisonline_ricarica');
 }, {TIME_RELOAD}000);</script> 
 <!-- ENDIF -->
 
-<!-- IF POSTS_RELOAD -->
+<!-- IF POSTS_RELOAD and SCRIPT_NAME eq 'viewtopic' -->
 <script>var auto_refresh = setInterval(function(){
-$('#posts').load('{URL_CORRENTE} #posts');
+jQuery('#posts').load('{URL_CORRENTE} #posts');
 }, {TIME_RELOAD}000);</script> 
 <!-- ENDIF -->
 
 <!-- IF VIEWFORUM_RELOAD and SCRIPT_NAME eq 'viewforum' -->
 <script>var auto_refresh = setInterval(function(){
-$('#page-body').load('{URL_CORRENTE} #page-body');
+jQuery('#page-body').load('{URL_CORRENTE} #page-body');
 }, {TIME_RELOAD}000);</script> 
 <!-- ENDIF -->
+
+
+
+
+
+<!--
+<script>
+var auto_refresh = setInterval(function(){
+jQuery.noConflict();
+jQuery('.notification-block').load('{URL_CORRENTE} .notification-block');
+}, {TIME_RELOAD}000);
+</script>
+<script>
+var auto_refresh = setInterval(function(){
+jQuery('#notification_list_button').load('{URL_CORRENTE} #notification_list_button');
+}, {TIME_RELOAD}000);
+</script>
+-->
